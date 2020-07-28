@@ -3,8 +3,8 @@ import java.util.HashMap;
 
 public class Zoo {
 
-    String name;
-    String address;
+    private String name;
+    private String address;
 
     Zoo(String name, String address){
       this.name = name;
