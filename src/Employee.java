@@ -1,5 +1,5 @@
 public class Employee extends User {
-    private String name;
+    private String fullName;
     private int age;
     private String gender;
     private int iD;
@@ -10,7 +10,7 @@ public class Employee extends User {
                     String zip, String city, String phone, String name, int age, String gender,
                     int iD, String emailAddress, String description) {
         super(firstName, lastName, eMail, address, zip, city, phone);
-        this.name = name;
+        this.fullName = name;
         this.age = age;
         this.gender = gender;
         this.iD = iD;
