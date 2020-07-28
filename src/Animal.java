@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+
+
 public class Animal {
     private String name;
     private static int counter = 0;
@@ -7,6 +9,8 @@ public class Animal {
     private species species;
     private healthStatus healthStatus;
     private ArrayList<VetHistory> vetHistory = new ArrayList<>();
+
+
 
     public Animal(String name, species species, healthStatus healthStatus) {
         this.name = name;
@@ -58,6 +62,8 @@ public class Animal {
         this.vetHistory = vetHistory;
     }
 
+
+
     @Override
     public String toString() {
         return "Animal{" +
@@ -65,4 +71,6 @@ public class Animal {
                 ", id=" + id +
                 '}';
     }
+
+    
 }
