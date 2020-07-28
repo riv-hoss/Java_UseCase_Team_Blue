@@ -2,7 +2,7 @@ public class Employee extends User {
     private String fullName;
     private int age;
     private String gender;
-    private int iD;
+    private int id;
     private String emailAddress;
     private String description;
 
@@ -13,7 +13,7 @@ public class Employee extends User {
         this.fullName = name;
         this.age = age;
         this.gender = gender;
-        this.iD = iD;
+        this.id = iD;
         this.emailAddress = emailAddress;
         this.description = description;
     }
@@ -31,7 +31,7 @@ public class Employee extends User {
     }
 
     public int getiD() {
-        return iD;
+        return id;
     }
 
     public String getEmailAddress() {
@@ -55,7 +55,7 @@ public class Employee extends User {
     }
 
     public void setiD(int iD) {
-        this.iD = iD;
+        this.id = iD;
     }
 
     public void setEmailAddress(String emailAddress) {
@@ -74,7 +74,7 @@ public class Employee extends User {
                 "fullName='" + fullName + '\'' +
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
-                ", iD=" + iD +
+                ", iD=" + id +
                 ", emailAddress='" + emailAddress + '\'' +
                 ", description='" + description + '\'' +
                 '}';
