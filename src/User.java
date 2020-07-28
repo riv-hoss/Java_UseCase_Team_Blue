@@ -3,8 +3,8 @@ public class User {
 	private int userId;
 	private String firstName, lastName, eMail, address, zip, city, phone;
 
-	public User(int userId, String firstName, String lastName, String eMail, String address, String zip, String city, String phone) {
-		this.userId = userId;
+	public User(String firstName, String lastName, String eMail, String address, String zip, String city, String phone) {
+		this.userId = ++totalEmployees;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.eMail = eMail;
