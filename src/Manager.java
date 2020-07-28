@@ -30,9 +30,9 @@ public class Manager extends User{
 	}
 
 	public void displayWeeklyStatusReports(){
-		//mix of the obove
+		//mix of the above
 	}
 
-	//ressourceManagement nice to have
+	//resourceManagement nice to have
 
 }
