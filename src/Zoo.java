@@ -41,7 +41,7 @@ public class Zoo {
                 System.out.println("2) Animals in special care.");
                 break;
             case 3:
-                System.out.println("3) At the Vet ranking for species\n");
+                System.out.println("3) At the Vet ranking for species");
                 break;
             case 4:
                 System.out.println("4) Animals per Species");
@@ -53,7 +53,7 @@ public class Zoo {
                 System.out.println("6) Number of sick Animals since Zoo opening");
                 break;
             case 7:
-                System.out.println("7) Number of animals who needed special care since Zoo opening\n");
+                System.out.println("7) Number of animals who needed special care since Zoo opening");
                 break;
             case 8:
                 System.out.println("8) Send to vet.");
