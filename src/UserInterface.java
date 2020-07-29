@@ -4,7 +4,7 @@ public class UserInterface {
 
 
     Scanner scan = new Scanner(System.in);
-    Zoo(){
+    UserInterface(){
         menu();
     }
     public void menu(){
