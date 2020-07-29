@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class Animal {
@@ -28,7 +29,15 @@ public class Animal {
     public int VetCounter(){
         vetCount = vetCounter++;
         //System.out.println(vetCount);
+
        return vetCount;
+    }
+
+
+    Zoo d = new Zoo("d", "d");
+    public void dd(){
+        d.getAnimals();
+        System.out.print(d.getUsers());
     }
 
 
@@ -37,8 +46,6 @@ public class Animal {
         //System.out.println(specialCareCount);
        return specialCareCount;
     }
-
-
 
 
 
