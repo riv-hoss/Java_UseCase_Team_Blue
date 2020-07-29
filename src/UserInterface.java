@@ -103,7 +103,7 @@ public class UserInterface {
                             break;
                     }
 
-                    System.out.println("3) At the Vet ranking for species");
+
                     break;
 
                 case 4:
@@ -150,7 +150,6 @@ public class UserInterface {
                             break;
                     }
 
-                    System.out.println("4) Animals per Species");
                     break;
                 case 5:
                     int vetTotalCount = 0;
