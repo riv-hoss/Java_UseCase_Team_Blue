@@ -1,6 +1,6 @@
 public class User {
 	private static int totalEmployees = 0;
-	private int userId;
+	private final int userId;
 	private String firstName, lastName, eMail, address, zip, city, phone;
 
 	public User(String firstName, String lastName, String eMail, String address, String zip, String city, String phone) {
@@ -14,20 +14,8 @@ public class User {
 		this.phone = phone;
 	}
 
-	public static int getTotalEmployees() {
-		return totalEmployees;
-	}
-
-	public static void setTotalEmployees(int totalEmployees) {
-		User.totalEmployees = totalEmployees;
-	}
-
 	public int getUserId() {
 		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
 	}
 
 	public String getFirstName() {
