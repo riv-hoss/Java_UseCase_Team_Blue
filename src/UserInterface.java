@@ -3,6 +3,13 @@ import java.util.Scanner;
 public class UserInterface {
 
     public void showMenu(Zoo zoo){
+
+        String hLine = "\n+" + "-".repeat(31) + "+";
+        String welcome = "\n|\t\t\t Welcome \t\t\t|";
+        String toThe = "\n|\t\t\t to the \t\t\t|";
+        String zName = "\n|\t\t\t %s \t\t\t|";
+        System.out.printf(hLine + welcome + toThe + zName + hLine, "uncomment me zoo.getName()");
+
         System.out.println("\nAnimal health request");
         System.out.println("1) Animals which are NOT healthy now");
         System.out.println("2) Animals in special care.");
