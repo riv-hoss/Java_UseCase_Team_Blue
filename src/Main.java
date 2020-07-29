@@ -6,11 +6,13 @@ public class Main {
 
         Zoo myZoo = new Zoo("CrazyZoo", "Vienna");
 
-        User user001 = new User("John", "Doe", "john@mail.xx", "Street 15", "45585", "Taiwan", "+5584646457");
-        myZoo.addMemberAsObject(user001);
+        Manager user001 = new Manager("John", "Doe", "john@mail.xx", "Street 15", "45585", "Taiwan", "+5584646457");
+        myZoo.addManagerAsObject(user001);
 
 
-        myZoo.addMember("Jane", "Doe", "jane@mail.xx", "Street 15", "5446", "Taiwan", "+5756456");
+        myZoo.addManager("Jane", "Doe", "jane@mail.xx", "Street 15", "5446", "Taiwan", "+5756456");
+
+
 
         user001.setFirstName("Snoopy");
 

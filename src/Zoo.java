@@ -18,13 +18,24 @@ public class Zoo {
 	HashMap<Integer, Animal> animals = new HashMap<>();
 
 
-	public void addMember(String firstName, String lastName, String eMail, String address, String zip, String city, String phone) {
-		User user = new User(firstName, lastName, eMail, address, zip, city, phone);
+	public void addManager(String firstName, String lastName, String eMail, String address, String zip, String city, String phone) {
+		User user = new Manager(firstName, lastName, eMail, address, zip, city, phone);
 		users.put(user.getUserId(), user);
 		System.out.println("User " + users.get(user.getUserId()).getFirstName() + " is added to User List");
 	}
 
-	public void addMemberAsObject(User user) {
+	public void addEmployee(String firstName, String lastName, String eMail, String address, String zip, String city, String phone) {
+		User user = new Manager(firstName, lastName, eMail, address, zip, city, phone);
+		users.put(user.getUserId(), user);
+		System.out.println("User " + users.get(user.getUserId()).getFirstName() + " is added to User List");
+	}
+
+	public void addManagerAsObject(Manager user) {
+		users.put(user.getUserId(), user);
+		System.out.println("User " + users.get(user.getUserId()).getFirstName() + " is added to User List");
+	}
+
+	public void addEmployeeAsObject(Manager user) {
 		users.put(user.getUserId(), user);
 		System.out.println("User " + users.get(user.getUserId()).getFirstName() + " is added to User List");
 	}
