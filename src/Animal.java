@@ -42,7 +42,7 @@ public class Animal {
 
 
 
-   /*
+
 
     public double getMedicationCost() {
 
@@ -69,9 +69,11 @@ public class Animal {
         return healthStatus;
     }
 
-    public ArrayList<VetHistory> getVetHistory() {
+    /*public ArrayList<VetHistory> getVetHistory() {
         return vetHistory;
     }
+
+     */
 
 
     public void setName(String name) {
@@ -86,9 +88,11 @@ public class Animal {
         this.healthStatus = healthStatus;
     }
 
-    public void setVetHistory(ArrayList<VetHistory> vetHistory) {
+    /*public void setVetHistory(ArrayList<VetHistory> vetHistory) {
         this.vetHistory = vetHistory;
     }
+
+     */
 
 
 
@@ -105,6 +109,6 @@ public class Animal {
     }
 
 
-    */
+
     
 }
