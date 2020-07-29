@@ -8,7 +8,7 @@ public class Manager extends User {
 
 	public void addEmployee(Zoo zoo, String firstName, String lastName, String eMail, String address, String zip, String city, String phone) {
 		Employee user = new Employee(firstName, lastName, eMail, address, zip, city, phone);
-		zoo.getUsersAsAdmin().put(user.getUserId(), user);
+		zoo.getUsersAsAdmin(this.getUserId()).put(user.getUserId(), user);
 		System.out.println();
 		System.out.println(this.getFullName() + " added Employee successfully to the users:");
 		zoo.displaySpecificUser(user.getUserId());
@@ -28,10 +28,17 @@ public class Manager extends User {
 				System.out.println("Employee " + employeeId + " will be removed!");
 				zoo.displaySpecificUser(employeeId);
 				System.out.println(this.getFullName() + " removed Employee " + employeeId + " successfully from the users!");
-				zoo.getUsersAsAdmin().remove(employeeId);
+//				Throws UserNotExistException
+//				zoo.getUsersAsAdmin(973).remove(employeeId);
+//				Ony Managers can access the Users by Admin
+//				zoo.getUsersAsAdmin(4).remove(employeeId);
+//				works
+				zoo.getUsersAsAdmin(this.getUserId()).remove(employeeId);
 			}
 		} catch (UserNotExistException e) {
 			System.out.println(e.getMessage());
+		}catch (NullPointerException e){
+			//do nothing
 		}
 	}
 

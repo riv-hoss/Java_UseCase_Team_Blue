@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -22,8 +23,25 @@ public class Zoo {
 		return new HashMap<>(users);
 	}
 
-	public HashMap<Integer, User> getUsersAsAdmin() {
-		return users;
+	public HashMap<Integer, User> getUsersAsAdmin(int userId) {
+		try {
+			if (!users.containsKey(userId)) {
+				throw new UserNotExistException("Employee " + userId + " does not exist!");
+			}
+			for (int i : users.keySet()) {
+				if (users.get(userId) instanceof Manager) {
+					return users;
+				} else {
+					System.out.println();
+					System.out.println("Only Managers can access Users as Admin!");
+					return null;
+				}
+			}
+			return new HashMap<>(users);
+		} catch (UserNotExistException e) {
+			System.out.println(e.getMessage());
+		}
+		return null;
 	}
 
 	public HashMap<Integer, Animal> getAnimals() {
