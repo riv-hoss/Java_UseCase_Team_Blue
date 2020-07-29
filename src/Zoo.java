@@ -37,7 +37,6 @@ public class Zoo {
 					return null;
 				}
 			}
-			return new HashMap<>(users);
 		} catch (UserNotExistException e) {
 			System.out.println(e.getMessage());
 		}
@@ -48,21 +47,21 @@ public class Zoo {
 		return new HashMap<>(animals);
 	}
 
-	public HashMap<Integer, Manager> getManagers(){
+	public HashMap<Integer, Manager> getManagers() {
 		HashMap<Integer, Manager> managers = new HashMap<>();
-		for(int i : users.keySet()){
-			if(users.get(i) instanceof Manager){
-				managers.put(users.get(i).getUserId(), (Manager)users.get(i));
+		for (int i : users.keySet()) {
+			if (users.get(i) instanceof Manager) {
+				managers.put(users.get(i).getUserId(), (Manager) users.get(i));
 			}
 		}
 		return managers;
 	}
 
-	public HashMap<Integer, Employee> getEmployees(){
+	public HashMap<Integer, Employee> getEmployees() {
 		HashMap<Integer, Employee> employees = new HashMap<>();
-		for(int i : users.keySet()){
-			if(users.get(i) instanceof Employee){
-				employees.put(users.get(i).getUserId(), (Employee)users.get(i));
+		for (int i : users.keySet()) {
+			if (users.get(i) instanceof Employee) {
+				employees.put(users.get(i).getUserId(), (Employee) users.get(i));
 			}
 		}
 		return employees;
@@ -151,14 +150,6 @@ public class Zoo {
 			System.out.println(e.getMessage());
 		}
 	}
-
-
-
-
-
-
-
-
 
 
 	//	public void removeMember(int userId) {
