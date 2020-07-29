@@ -75,6 +75,13 @@ public class Zoo {
 		displaySpecificUser(user.getUserId());
 	}
 
+	public void addAnimal(String name, String species, String healthStatus, boolean atTheVet, boolean atSpecialCare) {
+		Animal animal = new Animal(name, species, healthStatus, atTheVet, atSpecialCare);
+		animals.put(animal.getId(), animal);
+		System.out.println("\nAnimal successfully added to the animals: ");
+		displaySpecificAnimal(animal.getId());
+	}
+
 	public void addEmployee(String firstName, String lastName, String eMail, String address, String zip, String city, String phone) {
 		Employee user = new Employee(firstName, lastName, eMail, address, zip, city, phone);
 		users.put(user.getUserId(), user);
@@ -147,6 +154,19 @@ public class Zoo {
 			}
 			System.out.printf(displayUserPattern, users.get(i).getFirstName(), users.get(i).getLastName(), users.get(i).geteMail(), users.get(i).getAddress(), users.get(i).getZip(), users.get(i).getCity(), users.get(i).getPhone(), type, users.get(i).getUserId());
 		} catch (UserNotExistException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	public void displaySpecificAnimal(int i) {
+		try {
+			if (!animals.containsKey(i)) {
+				throw new AnimalNotExistException("Animal Id does not exist!");
+			}
+			String type = "";
+			System.out.printf(displayUserPattern, "NAME", "SPECIES", "HEALTH_STATUS", "AT_VET", "AT_SPECIAL_CARE");
+			System.out.printf(displayUserPattern, animals.get(i).getName(), animals.get(i).getSpecies(), animals.get(i).getHealthStatus(), animals.get(i).isAtTheVet(), animals.get(i).isAtSpecialCare());
+		} catch (AnimalNotExistException e) {
 			System.out.println(e.getMessage());
 		}
 	}
