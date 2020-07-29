@@ -91,6 +91,14 @@ public class User {
 		zoo.getAnimals().get(i).setSpecialCareCount(currentSpecialCareCount + 1);
 	}
 
+	public void getAnimalBackFromVet(Zoo zoo, int i) {
+		zoo.getAnimals().get(i).setAtTheVet(false);
+	}
+
+	public void getAnimalBackFromSpecialCare(Zoo zoo, int i) {
+		zoo.getAnimals().get(i).setAtSpecialCare(false);
+	}
+
 	@Override
 	public String toString() {
 		return "User{" +
