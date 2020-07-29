@@ -74,6 +74,17 @@ public class User {
 		this.phone = phone;
 	}
 
+	public void sendAnimalToVet(Animal a) {
+		a.setAtTheVet(true);
+		a.setVetCount(a.getVetCount() + 1);
+
+	}
+
+	public void sendAnimalToSpecialCare(Animal a) {
+		a.setAtSpecialCare(true);
+		a.setSpecialCareCount(a.getSpecialCareCount() + 1);
+	}
+
 	@Override
 	public String toString() {
 		return "User{" +

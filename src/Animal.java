@@ -76,6 +76,18 @@ public class Animal {
         return healthStatus;
     }
 
+    public int getSpecialCareCount() {
+        return specialCareCount;
+    }
+
+    public boolean isAtTheVet() {
+        return atTheVet;
+    }
+
+    public boolean isAtSpecialCare() {
+        return atSpecialCare;
+    }
+
     /*public ArrayList<VetHistory> getVetHistory() {
         return vetHistory;
     }
@@ -94,6 +106,19 @@ public class Animal {
     public void setHealthStatus(String healthStatus) {
         this.healthStatus = healthStatus;
     }
+
+    public void setSpecialCareCount(int specialCareCount) {
+        this.specialCareCount = specialCareCount;
+    }
+
+    public void setAtTheVet(boolean atTheVet) {
+        this.atTheVet = atTheVet;
+    }
+
+    public void setAtSpecialCare(boolean atSpecialCare) {
+        this.atSpecialCare = atSpecialCare;
+    }
+
 
     /*public void setVetHistory(ArrayList<VetHistory> vetHistory) {
         this.vetHistory = vetHistory;
