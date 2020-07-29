@@ -6,13 +6,15 @@ public class Animal {
     private String name;
     private static int counter = 0;
     private int id;
-    private species species;
-    private healthStatus healthStatus;
+    private int vetCount = 0;
+    private int specialCareCount = 0;
+    private String species;
+    private String healthStatus;
     private ArrayList<VetHistory> vetHistory = new ArrayList<>();
 
 
 
-    public Animal(String name, species species, healthStatus healthStatus) {
+    public Animal(String name, String species, String healthStatus) {
         this.name = name;
         this.species = species;
         this.healthStatus = healthStatus;
@@ -33,11 +35,15 @@ public class Animal {
         return id;
     }
 
-    public species getSpecies() {
+    public int getVetCount() {
+        return vetCount;
+    }
+
+    public String getSpecies() {
         return species;
     }
 
-    public healthStatus getHealthStatus() {
+    public String getHealthStatus() {
         return healthStatus;
     }
 
@@ -50,11 +56,11 @@ public class Animal {
         this.name = name;
     }
 
-    public void setSpecies(species species) {
+    public void setSpecies(String species) {
         this.species = species;
     }
 
-    public void setHealthStatus(healthStatus healthStatus) {
+    public void setHealthStatus(String healthStatus) {
         this.healthStatus = healthStatus;
     }
 
@@ -63,6 +69,10 @@ public class Animal {
     }
 
 
+
+    public void setVetCount(int vetCount) {
+        this.vetCount = vetCount;
+    }
 
     @Override
     public String toString() {
