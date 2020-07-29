@@ -41,16 +41,19 @@ public class Zoo {
 	}
 
 	public HashMap<Integer, User> getUsers() {
-		return users;
+		return new HashMap<>(users);
 	}
 
-
-	public void removeMember(int userId) {
-		users.remove(userId);
-		System.out.println("User is removed");
+	public HashMap<Integer, Animal> getAnimals() {
+		return new HashMap<>(animals);
 	}
 
-	public void printMembers() {
+	//	public void removeMember(int userId) {
+//		users.remove(userId);
+//		System.out.println("User is removed");
+//	}
+//
+	//	public void printMembers() {
 
 //        for (User i : users.keySet()){
 //            System.out.println("Users of the Zoo " + name);
@@ -95,5 +98,5 @@ public class Zoo {
 //        this.address = address;
 //    }
 
-	}
+
 }
