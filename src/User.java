@@ -78,15 +78,17 @@ public class User {
 		this.phone = phone;
 	}
 
-	public void sendAnimalToVet(Animal a) {
-		a.setAtTheVet(true);
-		a.setVetCount(a.getVetCount() + 1);
+	public void sendAnimalToVet(Zoo zoo, int i) {
+		zoo.getAnimals().get(i).setAtTheVet(true);
+		int currentVetCount =  zoo.getAnimals().get(i).getVetCount();
+		zoo.getAnimals().get(i).setVetCount(currentVetCount + 1);
 
 	}
 
-	public void sendAnimalToSpecialCare(Animal a) {
-		a.setAtSpecialCare(true);
-		a.setSpecialCareCount(a.getSpecialCareCount() + 1);
+	public void sendAnimalToSpecialCare(Zoo zoo, int i) {
+		zoo.getAnimals().get(i).setAtSpecialCare(true);
+		int currentSpecialCareCount =  zoo.getAnimals().get(i).getSpecialCareCount();
+		zoo.getAnimals().get(i).setSpecialCareCount(currentSpecialCareCount + 1);
 	}
 
 	@Override
