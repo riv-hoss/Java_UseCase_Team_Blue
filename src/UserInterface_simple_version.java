@@ -11,20 +11,20 @@ public class UserInterface_simple_version {
         String zName = "\n|\t\t\t %s \t\t\t|";
         System.out.printf(hLine + welcome + toThe + zName + hLine, zoo.getName());
 
-        System.out.println("\nAnimal health request");
-        System.out.println("1) Animals which are NOT healthy now");
-        System.out.println("2) Animals in special care.");
-        System.out.println("3) Number of Vet visits per animal species\n");
-        System.out.println("ZOO Status requests");
-        System.out.println("4) Animals per Species");
-        System.out.println("5)Number of Vet Interventions");
-        System.out.println("0) EXIT\n");
-
-        System.out.println("Enter you choice: ");
 
 
         boolean stop = false;
         while (!stop) {
+            System.out.println("\nAnimal health request");
+            System.out.println("1) Animals which are NOT healthy now");
+            System.out.println("2) Animals in special care.");
+            System.out.println("3) Number of Vet visits per animal species\n");
+            System.out.println("ZOO Status requests");
+            System.out.println("4) Animals per Species");
+            System.out.println("5)Number of Vet Interventions");
+            System.out.println("0) EXIT\n");
+
+            System.out.println("Enter you choice: ");
             Scanner scan = new Scanner(System.in);
             int inputMenu = scan.nextInt();
             switch (inputMenu) {
@@ -92,19 +92,23 @@ public class UserInterface_simple_version {
                     for (Animal a: zoo.getAnimals().values()) {
                         if (a.getSpecies().equalsIgnoreCase("Cat")) {
                             catCount++;
-                            System.out.printf("%nThere are %d of species 'Cat' in the zoo.  %n", catCount);
+
                         } else if (a.getSpecies().equalsIgnoreCase("Lion")) {
                             lionCount++;
-                            System.out.printf("%nThere are %d of species 'Cat' in the zoo.  %n", lionCount);
+
 
                         } else if (a.getSpecies().equalsIgnoreCase("Coyote")) {
                             coyoteCount++;
-                            System.out.printf("%nThere are %d of species 'Cat' in the zoo.  %n", coyoteCount);
+
                         } else {
                             pandaCount++;
-                            System.out.printf("%nThere are %d of species 'Cat' in the zoo.  %n", pandaCount);
+
                         }
                     }
+                    System.out.printf("%nThere are %d of species 'Cat' in the zoo.  %n", catCount);
+                    System.out.printf("%nThere are %d of species 'Cat' in the zoo.  %n", lionCount);
+                    System.out.printf("%nThere are %d of species 'Cat' in the zoo.  %n", coyoteCount);
+                    System.out.printf("%nThere are %d of species 'Cat' in the zoo.  %n", pandaCount);
                     break;
                 case 5:
                     int vetTotalCount = 0;
@@ -115,7 +119,7 @@ public class UserInterface_simple_version {
                     break;
                 default:
                     System.err.println("Choose a valid number!");
-                    showMenu(zoo);
+                    //showMenu(zoo);
 
             }
         }
