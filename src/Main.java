@@ -37,5 +37,8 @@ public class Main {
         //Throw user not exist Exception for Employee
         manager001.removeEmployee(myZoo, 972);
         myZoo.displayAllUsers();
+
+        UserInterface myMenu = new UserInterface();
+        myMenu.showMenu(myZoo);
     }
 }
