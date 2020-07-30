@@ -23,6 +23,10 @@ public class Zoo {
 		return new HashMap<>(users);
 	}
 
+	public String getName() {
+		return name;
+	}
+
 	public HashMap<Integer, User> getUsersAsAdmin(int userId) {
 		try {
 			if (!users.containsKey(userId)) {
