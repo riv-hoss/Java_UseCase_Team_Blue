@@ -168,8 +168,8 @@ public class Zoo {
 				throw new AnimalNotExistException("Animal Id does not exist!");
 			}
 			String type = "";
-			System.out.printf(displayUserPattern, "NAME", "SPECIES", "HEALTH_STATUS", "AT_VET", "AT_SPECIAL_CARE");
-			System.out.printf(displayUserPattern, animals.get(i).getName(), animals.get(i).getSpecies(), animals.get(i).getHealthStatus(), animals.get(i).isAtTheVet(), animals.get(i).isAtSpecialCare());
+			System.out.printf("%-20s%-20s%-20s%-25s%-9s%n", "NAME", "SPECIES", "HEALTH_STATUS", "AT_VET", "AT_SPECIAL_CARE");
+			System.out.printf("%-20s%-20s%-20s%-25b%-9b%n", animals.get(i).getName(), animals.get(i).getSpecies(), animals.get(i).getHealthStatus(), animals.get(i).isAtTheVet(), animals.get(i).isAtSpecialCare());
 		} catch (AnimalNotExistException e) {
 			System.out.println(e.getMessage());
 		}
